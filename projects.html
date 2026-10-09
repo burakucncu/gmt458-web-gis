@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" data-i18n-content="site.projectsDescription" content="Selected GNSS, remote sensing and geospatial software projects.">
+  <title data-i18n="site.projectsTitle">Burak Üçüncü | Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="i18n.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="logo" href="index.html" aria-label="Home" data-i18n-aria="nav.logo">BÜ<span class="logo-dot">.</span></a>
+      <div class="header-actions">
+        <nav aria-label="Main navigation" data-i18n-aria="nav.label">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a class="active" aria-current="page" href="projects.html" data-i18n="nav.projects">Projects</a>
+          <a href="maps.html" data-i18n="nav.maps">Maps</a>
+        </nav>
+        <div class="language-switch" role="group" aria-label="Language" data-i18n-aria="language.label">
+          <button type="button" class="selected" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-intro soft-enter"><span class="eyebrow" data-i18n="projects.eyebrow">MY WORK</span><h1 data-i18n="projects.title">Projects</h1><p data-i18n="projects.intro">Selected projects in GNSS, satellite imagery and geospatial software.</p></div>
+    <section class="project-grid" aria-label="Project cards" data-i18n-aria="projects.cardsLabel">
+      <article class="project-card">
+        <img src="images/gnss.svg" alt="Illustration of GNSS satellite signals" data-i18n-alt="projects.gnssImage" width="640" height="360">
+        <div class="project-content"><span class="category" data-i18n="projects.gnssCategory">GNSS · PYTHON</span><h2>GNSS NMEA Parser</h2><p data-i18n="projects.gnssDescription">A desktop application for parsing NMEA messages, exporting GPS data to CSV and viewing locations on a map.</p><a class="text-link" href="https://github.com/burakucncu/gnss-nmea-parser" target="_blank" rel="noopener noreferrer" data-i18n="projects.github">View on GitHub ↗</a></div>
+      </article>
+      <article class="project-card">
+        <img src="images/nimbus.svg" alt="Satellite cloud detection illustration" data-i18n-alt="projects.nimbusImage" width="640" height="360">
+        <div class="project-content"><span class="category" data-i18n="projects.nimbusCategory">REMOTE SENSING · PYTORCH</span><h2>Nimbus-Edge</h2><p data-i18n="projects.nimbusDescription">Satellite imagery cloud detection using image processing and deep learning.</p><a class="text-link" href="https://github.com/burakucncu/nimbus-edge" target="_blank" rel="noopener noreferrer" data-i18n="projects.github">View on GitHub ↗</a></div>
+      </article>
+      <article class="project-card">
+        <img src="images/aegis.svg" alt="Radar coverage and geospatial simulation illustration" data-i18n-alt="projects.aegisImage" width="640" height="360">
+        <div class="project-content"><span class="category" data-i18n="projects.aegisCategory">WEB GIS · CESIUMJS</span><h2>Aegis</h2><p data-i18n="projects.aegisDescription">A 3D geospatial simulation with radar, orbital visualization and air-defense concepts.</p><a class="text-link" href="https://github.com/burakucncu/aegis" target="_blank" rel="noopener noreferrer" data-i18n="projects.github">View on GitHub ↗</a></div>
+      </article>
+      <article class="project-card">
+        <img src="images/sat-track.svg" alt="Satellite orbit and Earth illustration" data-i18n-alt="projects.satImage" width="640" height="360">
+        <div class="project-content"><span class="category" data-i18n="projects.satCategory">SATELLITE TRACKING · PYTHON</span><h2>Sat-Track</h2><p data-i18n="projects.satDescription">Satellite pass predictions and ground-station tools using orbital calculations.</p><a class="text-link" href="https://github.com/burakucncu/sat-track" target="_blank" rel="noopener noreferrer" data-i18n="projects.github">View on GitHub ↗</a></div>
+      </article>
+    </section>
+
+    <section class="section bottom-section">
+      <div class="section-heading"><div><span class="eyebrow" data-i18n="projects.tableEyebrow">OVERVIEW</span><h2 data-i18n="projects.tableTitle">Project Overview</h2></div><p data-i18n="projects.tableLead">A quick comparison of the selected projects.</p></div>
+      <div class="table-scroll"><table class="project-table"><thead><tr><th data-i18n="projects.tableImage">Image</th><th data-i18n="projects.tableProject">Project</th><th data-i18n="projects.tableTools">Technologies</th><th data-i18n="projects.tablePurpose">Purpose</th></tr></thead><tbody>
+        <tr><td><img src="images/gnss.svg" alt="Illustration of GNSS satellite signals" data-i18n-alt="projects.gnssImage" width="116" height="65"></td><td>GNSS NMEA Parser</td><td>Python, PyQt5, Folium</td><td data-i18n="projects.gnssPurpose">GPS data parsing and map visualization</td></tr>
+        <tr><td><img src="images/nimbus.svg" alt="Satellite cloud detection illustration" data-i18n-alt="projects.nimbusImage" width="116" height="65"></td><td>Nimbus-Edge</td><td>Python, PyTorch, Rasterio</td><td data-i18n="projects.nimbusPurpose">Cloud detection in satellite imagery</td></tr>
+        <tr><td><img src="images/aegis.svg" alt="Radar coverage and geospatial simulation illustration" data-i18n-alt="projects.aegisImage" width="116" height="65"></td><td>Aegis</td><td>JavaScript, CesiumJS</td><td data-i18n="projects.aegisPurpose">3D spatial simulation</td></tr>
+        <tr><td><img src="images/sat-track.svg" alt="Satellite orbit and Earth illustration" data-i18n-alt="projects.satImage" width="116" height="65"></td><td>Sat-Track</td><td>Python, Skyfield, SGP4</td><td data-i18n="projects.satPurpose">Satellite pass prediction and tracking</td></tr>
+      </tbody></table></div>
+      <p class="small-note" data-i18n="projects.imageNote">Project illustrations are schematic and do not represent actual application screenshots.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Burak Üçüncü · GMT 458 Web GIS</span><a href="https://github.com/burakucncu" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></footer>
+</body>
+</html>

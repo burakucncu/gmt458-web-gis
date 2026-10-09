@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-label="GNSS illüstrasyonu">
+ <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#e9f5f8"/><stop offset="1" stop-color="#cfeaf1"/></linearGradient></defs>
+ <rect width="640" height="360" fill="url(#bg)"/>
+ <g stroke="#c6e3e9" stroke-width="1"><path d="M0 60H640M0 120H640M0 180H640M0 240H640M0 300H640"/><path d="M70 0V360M150 0V360M230 0V360M310 0V360M390 0V360M470 0V360M550 0V360"/></g>
+ <path d="M-30 316C120 258 180 305 295 242S470 225 675 163" fill="none" stroke="#8fc2d0" stroke-width="23" opacity=".7"/>
+ <g fill="none" stroke="#21789b" stroke-width="4" stroke-dasharray="8 7"><path d="M187 81L317 266M452 76L317 266M320 50L317 266"/></g>
+ <g fill="#fff" stroke="#247499" stroke-width="6"><circle cx="317" cy="266" r="18"/></g><circle cx="317" cy="266" r="8" fill="#247499"/>
+ <g fill="#fff" stroke="#247499" stroke-width="4"><rect x="145" y="58" width="85" height="30" rx="7" transform="rotate(-12 187 73)"/><rect x="407" y="55" width="85" height="30" rx="7" transform="rotate(14 450 70)"/><rect x="278" y="30" width="85" height="30" rx="7"/></g>
+ <g stroke="#247499" stroke-width="4" stroke-linecap="round"><path d="M188 48v-13m261 13V35M320 27V14"/></g>
+ <rect x="24" y="285" width="155" height="52" rx="10" fill="#fff" opacity=".92"/><text x="39" y="305" fill="#688797" font-family="Arial,sans-serif" font-size="12">GNSS POSITION</text><text x="39" y="325" fill="#185775" font-family="Arial,sans-serif" font-weight="bold" font-size="15">NMEA / RINEX</text>
+</svg>
