@@ -21,12 +21,12 @@ The website supports **English** and **Turkish**. English is the default languag
 
 ## Web GIS
 
-Both maps hide location markers when the zoom level is below **7**.
+Both maps display ten restaurants, cafes and pubs around Ankara. Location markers are hidden below zoom level **11**.
 
 - **Leaflet:** The marker layer is controlled by the `zoomend` event. The OpenStreetMap tile layer uses `noWrap: true`, and map bounds limit horizontal navigation.
 - **OpenLayers:** Vector marker visibility follows the view resolution. The tile and vector sources use `wrapX: false`, and the map view has a bounded extent.
 
-City coordinates and project locations are illustrative examples, not GNSS reference station data. Images in `images/` are schematic illustrations, not screenshots or satellite images. Map tiles and libraries are loaded online.
+The locations are listed in `places.js`. The pins for Dino Dürüm (Konur branch) and Kayf Coffee are approximate. Each popup includes an address and a map-search link. Images in `images/` are schematic illustrations, not screenshots. Map tiles and libraries are loaded online.
 
 ## Run locally
 
@@ -52,7 +52,7 @@ The following topics were discussed or assisted with ChatGPT while preparing thi
 
 - HTML/CSS page structure and responsive layout.
 - Language selection with JavaScript and browser storage.
-- Leaflet and OpenLayers marker visibility and world wrapping settings.
+- Leaflet and OpenLayers marker visibility, popups and world wrapping settings.
 - Project page organization and Git workflow planning.
 
 **Estimated total AI usage:** _[Enter your own accurate estimate in minutes/hours before submission]._

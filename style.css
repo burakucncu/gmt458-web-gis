@@ -39,3 +39,11 @@ p{color:var(--muted)}.lead{font-size:1.05rem;max-width:580px}
 .project-content p{min-height:74px}
 @media(max-width:740px){.navbar{flex-wrap:wrap;padding-top:12px;padding-bottom:12px;gap:10px}.header-actions{gap:8px}}
 @media(max-width:620px){.header-actions{width:100%;justify-content:space-between}.project-grid{grid-template-columns:1fr}.project-content p{min-height:auto}.language-switch button{padding:8px 9px}}
+
+.place-popup{display:grid;gap:4px;min-width:165px;font-size:.85rem;line-height:1.45}
+.place-popup strong{color:var(--ink);font-size:.96rem}
+.place-popup .place-category{font-weight:700;color:var(--blue)}
+.place-popup small{color:var(--muted)}
+.place-popup a{color:var(--blue);text-decoration:none;font-weight:700;margin-top:4px}
+.place-popup a:hover{text-decoration:underline}
+.ol-popup{max-width:290px}

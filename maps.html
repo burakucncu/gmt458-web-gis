@@ -11,6 +11,7 @@
   <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/ol@10.11.0/dist/ol.js"></script>
   <script defer src="i18n.js"></script>
+  <script defer src="places.js"></script>
   <script defer src="leaflet.js"></script>
   <script defer src="openlayers.js"></script>
 </head>
@@ -32,25 +33,25 @@
     </div>
   </header>
   <main class="container">
-    <div class="page-intro soft-enter"><span class="eyebrow">GMT 458 · WEB GIS</span><h1 data-i18n="maps.introTitle">Interactive Maps</h1><p data-i18n="maps.introDescription">Explore two maps built with Leaflet and OpenLayers. Zoom in to display the location markers.</p></div>
-    <div class="info-strip"><span data-i18n="maps.featureOne">Markers appear at zoom level 7 and above.</span><span data-i18n="maps.featureTwo">The world does not repeat horizontally.</span></div>
+    <div class="page-intro soft-enter"><span class="eyebrow">GMT 458 · WEB GIS</span><h1 data-i18n="maps.introTitle">Interactive Maps</h1><p data-i18n="maps.introDescription">Explore food and coffee places around Ankara with Leaflet and OpenLayers.</p></div>
+    <div class="info-strip"><span data-i18n="maps.featureOne">Markers appear at zoom level 11 and above.</span><span data-i18n="maps.featureTwo">The world does not repeat horizontally.</span></div>
     <section class="map-section" aria-labelledby="leaflet-title">
-      <div class="map-header"><div><span class="eyebrow" data-i18n="maps.mapOne">MAP 01</span><h2 id="leaflet-title" data-i18n="maps.leafletTitle">Leaflet · Project Locations</h2><p data-i18n="maps.leafletDescription">Example study areas from geospatial projects.</p></div><span class="map-library">Leaflet</span></div>
-      <div id="leaflet-map" class="map-view" role="application" aria-label="Leaflet map of project locations" data-i18n-aria="maps.leafletAria"></div>
+      <div class="map-header"><div><span class="eyebrow" data-i18n="maps.mapOne">MAP 01</span><h2 id="leaflet-title" data-i18n="maps.leafletTitle">Leaflet · Food & Coffee Spots</h2><p data-i18n="maps.leafletDescription">Selected food and coffee places around Çankaya, Ankara.</p></div><span class="map-library">Leaflet</span></div>
+      <div id="leaflet-map" class="map-view" role="application" aria-label="Leaflet map of restaurants and cafes in Ankara" data-i18n-aria="maps.leafletAria"></div>
       <div id="leaflet-status" class="map-status" aria-live="polite" data-i18n="maps.loadingLeaflet">Loading Leaflet map…</div>
-      <p class="small-note" data-i18n="maps.leafletHint">Zoom in to level 7 and click a marker to see its details.</p>
+      <p class="small-note" data-i18n="maps.leafletHint">Click a marker for the address. Zoom out below level 11 to hide markers.</p>
     </section>
     <section class="map-section" aria-labelledby="ol-title">
-      <div class="map-header"><div><span class="eyebrow" data-i18n="maps.mapTwo">MAP 02</span><h2 id="ol-title" data-i18n="maps.olTitle">OpenLayers · Example Locations</h2><p data-i18n="maps.olDescription">Sample city locations in Türkiye; these are not GNSS reference stations.</p></div><span class="map-library">OpenLayers</span></div>
-      <div id="openlayers-map" class="map-view" role="application" aria-label="OpenLayers map of sample locations in Türkiye" data-i18n-aria="maps.olAria"></div>
+      <div class="map-header"><div><span class="eyebrow" data-i18n="maps.mapTwo">MAP 02</span><h2 id="ol-title" data-i18n="maps.olTitle">OpenLayers · Food & Coffee Spots</h2><p data-i18n="maps.olDescription">The same locations displayed with OpenLayers.</p></div><span class="map-library">OpenLayers</span></div>
+      <div id="openlayers-map" class="map-view" role="application" aria-label="OpenLayers map of restaurants and cafes in Ankara" data-i18n-aria="maps.olAria"></div>
       <div id="ol-popup" class="ol-popup" hidden></div>
       <div id="openlayers-status" class="map-status" aria-live="polite" data-i18n="maps.loadingOl">Loading OpenLayers map…</div>
-      <p class="small-note" data-i18n="maps.olHint">Markers appear at zoom level 7 and disappear when you zoom out.</p>
+      <p class="small-note" data-i18n="maps.olHint">Markers appear at zoom level 11 and disappear when you zoom out.</p>
     </section>
     <section class="simple-panel map-explainer bottom-section">
       <h2 data-i18n="maps.settingsTitle">Map Settings</h2>
       <div class="explain-grid">
-        <div><h3 data-i18n="maps.zoomTitle">1. Zoom Threshold</h3><p data-i18n="maps.zoomDescription">Markers are displayed at zoom level 7 and above, and hidden at lower zoom levels.</p></div>
+        <div><h3 data-i18n="maps.zoomTitle">1. Zoom Threshold</h3><p data-i18n="maps.zoomDescription">Markers are displayed at zoom level 11 and above, and hidden at lower zoom levels.</p></div>
         <div><h3 data-i18n="maps.wrapTitle">2. World Wrapping</h3><p data-i18n="maps.wrapDescription">Leaflet uses noWrap: true and OpenLayers uses wrapX: false to prevent horizontal repetition.</p></div>
       </div>
     </section>

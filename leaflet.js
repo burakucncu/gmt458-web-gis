@@ -9,10 +9,10 @@
     return;
   }
 
-  const threshold = 7;
+  const threshold = 11;
   const map = L.map('leaflet-map', {
-    center: [39.2, 35.0],
-    zoom: 5,
+    center: [39.922, 32.855],
+    zoom: 11,
     minZoom: 2,
     maxZoom: 18,
     maxBounds: [[-85, -180], [85, 180]],
@@ -25,17 +25,10 @@
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  const locations = [
-    { name: 'Ankara', lat: 39.9334, lon: 32.8597, info: 'maps.ankaraInfo' },
-    { name: 'İstanbul', lat: 41.0082, lon: 28.9784, info: 'maps.istanbulInfo' },
-    { name: 'maps.vanName', lat: 38.6220, lon: 42.8760, info: 'maps.vanInfo' },
-    { name: 'maps.barcelonaName', lat: 41.3874, lon: 2.1686, info: 'maps.barcelonaInfo' }
-  ];
-
   const markerLayer = L.layerGroup();
-  const markers = locations.map(place => {
+  const markers = foodPlaces.map(place => {
     const marker = L.marker([place.lat, place.lon]).addTo(markerLayer);
-    marker.bindPopup('');
+    marker.bindPopup(placeDetails(place));
     return { marker, place };
   });
 
@@ -45,13 +38,9 @@
     if (visible && !map.hasLayer(markerLayer)) markerLayer.addTo(map);
     if (!visible && map.hasLayer(markerLayer)) map.removeLayer(markerLayer);
 
-    markers.forEach(({ marker, place }) => {
-      const name = place.name.startsWith('maps.') ? window.t(place.name) : place.name;
-      marker.setPopupContent(`<strong>${name}</strong><br>${window.t(place.info)}<br><small>${place.lat.toFixed(4)}°, ${place.lon.toFixed(4)}°</small>`);
-    });
-
+    markers.forEach(({ marker, place }) => marker.setPopupContent(placeDetails(place)));
     const label = visible
-      ? window.t('maps.statusVisible').replace('{count}', locations.length)
+      ? window.t('maps.statusVisible').replace('{count}', foodPlaces.length)
       : window.t('maps.statusHidden');
     status.textContent = `${window.t('maps.statusZoom')}: ${zoom} · ${label} · ${window.t('maps.statusThreshold')}: ${threshold}`;
   }
