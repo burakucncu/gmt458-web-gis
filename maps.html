@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" data-i18n-content="site.mapsDescription" content="Interactive maps built with Leaflet and OpenLayers.">
+  <title data-i18n="site.mapsTitle">Burak Üçüncü | Web GIS Maps</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@10.11.0/ol.css">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/ol@10.11.0/dist/ol.js"></script>
+  <script defer src="i18n.js"></script>
+  <script defer src="leaflet.js"></script>
+  <script defer src="openlayers.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="logo" href="index.html" aria-label="Home" data-i18n-aria="nav.logo">BÜ<span class="logo-dot">.</span></a>
+      <div class="header-actions">
+        <nav aria-label="Main navigation" data-i18n-aria="nav.label">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="projects.html" data-i18n="nav.projects">Projects</a>
+          <a class="active" aria-current="page" href="maps.html" data-i18n="nav.maps">Maps</a>
+        </nav>
+        <div class="language-switch" role="group" aria-label="Language" data-i18n-aria="language.label">
+          <button type="button" class="selected" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <div class="page-intro soft-enter"><span class="eyebrow">GMT 458 · WEB GIS</span><h1 data-i18n="maps.introTitle">Interactive Maps</h1><p data-i18n="maps.introDescription">Explore two maps built with Leaflet and OpenLayers. Zoom in to display the location markers.</p></div>
+    <div class="info-strip"><span data-i18n="maps.featureOne">Markers appear at zoom level 7 and above.</span><span data-i18n="maps.featureTwo">The world does not repeat horizontally.</span></div>
+    <section class="map-section" aria-labelledby="leaflet-title">
+      <div class="map-header"><div><span class="eyebrow" data-i18n="maps.mapOne">MAP 01</span><h2 id="leaflet-title" data-i18n="maps.leafletTitle">Leaflet · Project Locations</h2><p data-i18n="maps.leafletDescription">Example study areas from geospatial projects.</p></div><span class="map-library">Leaflet</span></div>
+      <div id="leaflet-map" class="map-view" role="application" aria-label="Leaflet map of project locations" data-i18n-aria="maps.leafletAria"></div>
+      <div id="leaflet-status" class="map-status" aria-live="polite" data-i18n="maps.loadingLeaflet">Loading Leaflet map…</div>
+      <p class="small-note" data-i18n="maps.leafletHint">Zoom in to level 7 and click a marker to see its details.</p>
+    </section>
+    <section class="map-section" aria-labelledby="ol-title">
+      <div class="map-header"><div><span class="eyebrow" data-i18n="maps.mapTwo">MAP 02</span><h2 id="ol-title" data-i18n="maps.olTitle">OpenLayers · Example Locations</h2><p data-i18n="maps.olDescription">Sample city locations in Türkiye; these are not GNSS reference stations.</p></div><span class="map-library">OpenLayers</span></div>
+      <div id="openlayers-map" class="map-view" role="application" aria-label="OpenLayers map of sample locations in Türkiye" data-i18n-aria="maps.olAria"></div>
+      <div id="ol-popup" class="ol-popup" hidden></div>
+      <div id="openlayers-status" class="map-status" aria-live="polite" data-i18n="maps.loadingOl">Loading OpenLayers map…</div>
+      <p class="small-note" data-i18n="maps.olHint">Markers appear at zoom level 7 and disappear when you zoom out.</p>
+    </section>
+    <section class="simple-panel map-explainer bottom-section">
+      <h2 data-i18n="maps.settingsTitle">Map Settings</h2>
+      <div class="explain-grid">
+        <div><h3 data-i18n="maps.zoomTitle">1. Zoom Threshold</h3><p data-i18n="maps.zoomDescription">Markers are displayed at zoom level 7 and above, and hidden at lower zoom levels.</p></div>
+        <div><h3 data-i18n="maps.wrapTitle">2. World Wrapping</h3><p data-i18n="maps.wrapDescription">Leaflet uses noWrap: true and OpenLayers uses wrapX: false to prevent horizontal repetition.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Burak Üçüncü · GMT 458 Web GIS</span><a href="https://github.com/burakucncu" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></footer>
+</body>
+</html>
